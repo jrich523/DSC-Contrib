@@ -72,6 +72,7 @@ class $Name : MSFT_BaseResourceConfiguration
                 {$_ -eq [System.Int64[]]} { $PropertyString += '] sint64 ' + "$key[];`n" }
                 {$_ -eq [System.Int32]} { $PropertyString += '] sint32 ' + "$key;`n" }
                 {$_ -eq [System.Int32[]]} { $PropertyString += '] sint32 ' + "$key[];`n" }
+
                 default { Write-Warning "Don't know what to do with $_";}
             }
             
