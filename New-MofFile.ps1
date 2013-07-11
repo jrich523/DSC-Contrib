@@ -1,5 +1,13 @@
 ﻿function New-MofFile
 {
+    <#
+    .Synopsis
+       Generates a MOF Class declaration for a DSC Module
+    .DESCRIPTION
+       Uses the parameters of Set-TargetResource in a DSC Resource Module to generate a MOF schema file for use in DSC.
+    .EXAMPLE
+       New-MofFile -Name Pagefile
+    #>
     param (
         $Name,
         $ModuleName,
