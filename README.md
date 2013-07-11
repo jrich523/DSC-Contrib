@@ -3,6 +3,15 @@ DSC-Contrib
 
 Desired State Configuration Modules to augment the initial offering in PowerShell V4
 
+ToDo
+=====
+- [x] Initial upload
+- [ ] Make New-MofFile handle more data types and complex data types
+- [ ] Improve the DSC Module creation documentation
+- [ ] Add samples of complete configurations
+- [ ] Add samples of nested configurations
+- [ ] MORE Modules!
+
 
 Getting Started With DSC Modules
 --------------------------------
