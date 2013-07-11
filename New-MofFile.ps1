@@ -26,7 +26,8 @@ class $Name : MSFT_BaseResourceConfiguration
 
 "@
     $CommonParameters = 'Verbose', 'Debug', 'ErrorAction', 'WarningAction', 
-                        'WarningVariable', 'ErrorVariable', 'OutVariable', 'OutBuffer'
+                        'WarningVariable', 'ErrorVariable', 'OutVariable', 
+                        'OutBuffer', 'PipelineVariable'
     $Command = get-command -Name Set-TargetResource -Module $ModuleName
 
     foreach ($key in $Command.Parameters.Keys)
@@ -67,6 +68,7 @@ class $Name : MSFT_BaseResourceConfiguration
                 {$_ -eq [System.Management.Automation.SwitchParameter]} { $PropertyString += '] boolean ' + "$key;`n"}
                 {$_ -eq [System.Management.Automation.PSCredential]} { $PropertyString += ',EmbeddedInstance("MSFT_Credential")] string ' + "$key;`n"}
                 {$_ -eq [System.String[]]} { $PropertyString += '] string ' + "$key[];`n" }
+                {$_ -eq [
                 default { Write-Warning "Don't know what to do with $_";}
             }
             
